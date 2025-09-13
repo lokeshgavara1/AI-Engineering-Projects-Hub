@@ -18,6 +18,10 @@ This project leverages CrewAI and Cohere's Command-R:7B model to build an AI new
 
 ---
 
+**How to execute**:
+   Streamlit run app.py
+
+   
 ## Contribution
 
 @lokeshgavara1

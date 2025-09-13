@@ -10,9 +10,14 @@ load_dotenv()
 # Streamlit page config
 st.set_page_config(page_title="AI News Generator", page_icon="📰", layout="wide")
 
-# Title and description
-st.title("🤖 AI News Generator, powered by CrewAI and Cohere's Command R7B")
-st.markdown("Generate comprehensive blog posts about any topic using AI agents.")
+# Professional Header
+st.markdown("""
+<div style='background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;'>
+    <h1 style='color: white; margin: 0; font-size: 2.5rem; font-weight: bold;'>🤖 AI News Generator</h1>
+    <p style='color: #e8e8e8; margin: 10px 0 0 0; font-size: 1.2rem;'>Powered by CrewAI and Cohere's Command R7B</p>
+    <p style='color: #ffd700; margin: 5px 0 0 0; font-size: 1rem; font-style: italic;'>Generate comprehensive blog posts about any topic using advanced AI agents</p>
+</div>
+""", unsafe_allow_html=True)
 
 # Sidebar
 with st.sidebar:
@@ -43,6 +48,40 @@ with st.sidebar:
         3. Click 'Generate Content' to start
         4. Wait for the AI to generate your article
         5. Download the result as a markdown file
+        """)
+
+    # Developer information in sidebar
+    st.markdown("---")
+    with st.container():
+        st.markdown("### 👨‍💻 **Developer**")
+        st.markdown("""
+        <div style='text-align: center; padding: 10px; background-color: #f0f2f6; border-radius: 10px; margin: 10px 0;'>
+            <h4 style='margin: 0; color: #1f77b4;'>Lokesh Gavara</h4>
+            <p style='margin: 5px 0; color: #666; font-style: italic;'>AI Engineer & Full Stack Developer</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lokeshgavara5/)")
+        with col2:
+            st.markdown("[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/lokeshgavara1)")
+
+    # Professional About Section
+    with st.expander("📋 About the Developer"):
+        st.markdown("""
+        **Lokesh Gavara** is an experienced AI Engineer and Full Stack Developer specializing in:
+
+        🔹 **Artificial Intelligence & Machine Learning**
+        🔹 **CrewAI & Multi-Agent Systems**
+        🔹 **Full Stack Web Development**
+        🔹 **Python & Modern Frameworks**
+        🔹 **AI-Powered Applications**
+
+        This AI News Generator showcases advanced AI agent orchestration using CrewAI framework,
+        demonstrating expertise in building intelligent, automated content generation systems.
+
+        **Connect for collaborations, projects, or AI consulting opportunities!**
         """)
 
 def generate_content(topic):
@@ -214,6 +253,38 @@ elif generate_button:
                 - Restart the application if issues persist
                 """)
 
-# Footer
+# Professional Footer
 st.markdown("---")
-st.markdown("Built with CrewAI, Streamlit and powered by Cohere's Command R7B")
+st.markdown("""
+<div style='background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; margin: 20px 0;'>
+    <div style='display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;'>
+        <div style='flex: 1; min-width: 300px;'>
+            <h3 style='color: white; margin: 0 0 10px 0;'>🤖 AI News Generator</h3>
+            <p style='color: #e8e8e8; margin: 0; font-size: 14px;'>
+                Built with CrewAI, Streamlit and powered by Cohere's Command R7B<br>
+                Leveraging advanced AI agents for comprehensive content generation
+            </p>
+        </div>
+        <div style='flex: 0 0 auto; text-align: center; margin-left: 20px;'>
+            <h4 style='color: white; margin: 0 0 15px 0;'>👨‍💻 Developed by</h4>
+            <h3 style='color: #ffd700; margin: 0 0 10px 0;'>Lokesh Gavara</h3>
+            <p style='color: #e8e8e8; margin: 0 0 15px 0; font-style: italic;'>AI Engineer & Full Stack Developer</p>
+            <div style='display: flex; gap: 10px; justify-content: center;'>
+                <a href='https://www.linkedin.com/in/lokeshgavara5/' target='_blank'>
+                    <img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white' alt='LinkedIn'/>
+                </a>
+                <a href='https://github.com/lokeshgavara1' target='_blank'>
+                    <img src='https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white' alt='GitHub'/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# Copyright notice
+st.markdown("""
+<div style='text-align: center; color: #666; font-size: 12px; margin-top: 20px;'>
+    © 2024 Lokesh Gavara. All rights reserved. | Built with ❤️ using AI Technology
+</div>
+""", unsafe_allow_html=True)
