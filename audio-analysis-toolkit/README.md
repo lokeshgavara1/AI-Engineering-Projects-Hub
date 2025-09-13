@@ -59,5 +59,8 @@ streamlit run app.py
   - Discover key topics
   - Chat with your audio content
 
-
+## Author
+### Gavara Lokesh
+📧 lokeshgavara1@gmail.com
+🔗 LinkedIn Profile
 
