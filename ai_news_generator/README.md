@@ -22,6 +22,7 @@ This project leverages CrewAI and Cohere's Command-R:7B model to build an AI new
    Streamlit run app.py
 
    
-## Contribution
-
-@lokeshgavara1
+## Author
+### Gavara Lokesh
+📧 lokeshgavara1@gmail.com
+🔗 LinkedIn Profile
